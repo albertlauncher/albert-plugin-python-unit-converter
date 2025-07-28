@@ -30,7 +30,7 @@ md_version = "1.8"
 md_name = "Unit Converter"
 md_description = "Convert between units"
 md_license = "MIT"
-md_url = "https://github.com/albertlauncher/python/tree/main/unit_converter"
+md_url = "https://github.com/albertlauncher/albert-plugin-python-unit-converter"
 md_lib_dependencies = ["pint", "inflect"]
 md_authors = ["@DenverCoder1", "@Pete-Hamlin"]
 
