@@ -33,6 +33,7 @@ md_license = "MIT"
 md_url = "https://github.com/albertlauncher/albert-plugin-python-unit-converter"
 md_lib_dependencies = ["pint", "inflect"]
 md_authors = ["@DenverCoder1", "@Pete-Hamlin"]
+md_maintainers = ["@DenverCoder1", "@Pete-Hamlin"]
 
 
 class ConversionResult:
