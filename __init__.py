@@ -25,7 +25,7 @@ import inflect
 import pint
 from albert import *
 
-md_iid = "3.0"
+md_iid = "4.0"
 md_version = "1.8"
 md_name = "Unit Converter"
 md_description = "Convert between units"
@@ -403,7 +403,7 @@ class Plugin(PluginInstance, GlobalQueryHandler):
             icon_path = Path(__file__).parent / "icons" / "unit_converter.svg"
         return StandardItem(
             id=str(icon_path),
-            iconUrls=["file:" + str(icon_path)],
+            iconFactory=lambda: makeImageIcon(icon_path),
             text=text,
             subtext=subtext,
             actions=[
