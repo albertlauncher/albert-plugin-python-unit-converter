@@ -25,7 +25,7 @@ import inflect
 import pint
 from albert import *
 
-md_iid = "4.0"
+md_iid = "5.0"
 md_version = "1.8.1"
 md_name = "Unit Converter"
 md_description = "Convert between units"
@@ -361,13 +361,12 @@ class Plugin(PluginInstance, GlobalQueryHandler):
     def synopsis(self, query):
         return "<amount> <from_unit> to <to_unit>"
 
-    def handleTriggerQuery(self, query: Query) -> None:
-        if query_string := query.string.strip():
-            items = self.match_query(query_string)
-            query.add(items)
+    def items(self, ctx):
+        if query_string := ctx.query.strip():
+            yield self.match_query(query_string)
 
-    def handleGlobalQuery(self, query):
-        return [RankItem(item=item, score=1) for item in self.match_query(query.string.strip())]
+    def rankItems(self, ctx):
+        return [RankItem(item=item, score=1) for item in self.match_query(ctx.query.strip())]
 
     def match_query(self, query_string: str):
         match = self.unit_convert_regex.fullmatch(query_string)
