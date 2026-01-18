@@ -402,7 +402,7 @@ class Plugin(PluginInstance, GlobalQueryHandler):
             icon_path = Path(__file__).parent / "icons" / "unit_converter.svg"
         return StandardItem(
             id=str(icon_path),
-            icon_factory=lambda: makeImageIcon(icon_path),
+            icon_factory=lambda: Icon.image(icon_path),
             text=text,
             subtext=subtext,
             actions=[
