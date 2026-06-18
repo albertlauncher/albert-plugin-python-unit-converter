@@ -25,7 +25,7 @@ import inflect
 import pint
 from albert import *
 
-md_iid = "5.0"
+md_iid = "6.0"
 md_version = "1.8.2"
 md_name = "Unit Converter"
 md_description = "Convert between units"
